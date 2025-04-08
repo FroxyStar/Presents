@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальные жанры 90х-2000х</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            color: #ff4d4d;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        
+        ul {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .animate-left {
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        /* Фоны слайдов */
+        #title-slide {
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+        }
+        
+        #pop-slide {
+            background: linear-gradient(135deg, #ff6b6b, #ffa3a3);
+        }
+        
+        #rock-slide {
+            background: linear-gradient(135deg, #000, #ff4d4d);
+        }
+        
+        #hiphop-slide {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+        
+        #electronic-slide {
+            background: linear-gradient(135deg, #0f0c29, #302b63);
+        }
+        
+        #end-slide {
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+        }
+        
+        /* Кнопки навигации (исправлено) */
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .nav-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Титульный слайд -->
+    <div class="slide" id="title-slide">
+        <h1 class="animate">Музыкальные жанры</h1>
+        <h2 class="animate" style="animation-delay: 0.3s;">90х-2000х</h2>
+        <p class="animate" style="animation-delay: 0.6s;">От поп-музыки до рока и электроники</p>
+    </div>
+    
+    <!-- Поп-музыка -->
+    <div class="slide" id="pop-slide">
+        <h2 class="animate-left">Поп-музыка (Pop)</h2>
+        <p class="animate-left" style="animation-delay: 0.3s;">Легкие, запоминающиеся мелодии, ориентированные на массовую аудиторию.</p>
+        <ul class="animate-left" style="animation-delay: 0.6s;">
+            <li><strong>Britney Spears</strong> – "...Baby One More Time" (1998)</li>
+            <li><strong>Backstreet Boys</strong> – "I Want It That Way" (1999)</li>
+            <li><strong>*NSYNC</strong> – "Bye Bye Bye" (2000)</li>
+        </ul>
+    </div>
+    
+    <!-- Рок -->
+    <div class="slide" id="rock-slide">
+        <h2 class="animate-left">Рок & Альтернатива</h2>
+        <p class="animate-left" style="animation-delay: 0.3s;">Энергичные гитарные риффы, эмоциональные тексты.</p>
+        <ul class="animate-left" style="animation-delay: 0.6s;">
+            <li><strong>Nirvana</strong> – "Smells Like Teen Spirit" (1991)</li>
+            <li><strong>Red Hot Chili Peppers</strong> – "Californication" (1999)</li>
+            <li><strong>Linkin Park</strong> – "In the End" (2000)</li>
+        </ul>
+    </div>
+    
+    <!-- Хип-хоп и R&B -->
+    <div class="slide" id="hiphop-slide">
+        <h2 class="animate-left">Хип-хоп & R&B</h2>
+        <p class="animate-left" style="animation-delay: 0.3s;">Ритмичные биты, речитатив и мелодичные вокальные партии.</p>
+        <ul class="animate-left" style="animation-delay: 0.6s;">
+            <li><strong>Eminem</strong> – "Lose Yourself" (2002)</li>
+            <li><strong>Tupac</strong> – "California Love" (1996)</li>
+            <li><strong>Destiny’s Child</strong> – "Say My Name" (1999)</li>
+        </ul>
+    </div>
+    
+    <!-- Электронная музыка -->
+    <div class="slide" id="electronic-slide">
+        <h2 class="animate-left">Электроника</h2>
+        <p class="animate-left" style="animation-delay: 0.3s;">Энергичные синтезаторные мелодии, биты для клубов.</p>
+        <ul class="animate-left" style="animation-delay: 0.6s;">
+            <li><strong>Daft Punk</strong> – "Around the World" (1997)</li>
+            <li><strong>Robert Miles</strong> – "Children" (1995)</li>
+            <li><strong>Benny Benassi</strong> – "Satisfaction" (2002)</li>
+        </ul>
+    </div>
+    
+    <!-- Завершающий слайд -->
+    <div class="slide" id="end-slide">
+        <h1 class="animate">Спасибо за внимание!</h1>
+        <p class="animate" style="animation-delay: 0.3s;">Музыка 90х-2000х — это эпоха, которая изменила мир.</p>
+    </div>
+    
+    <!-- Кнопки навигации (исправлено) -->
+    <div class="nav-buttons">
+        <button class="nav-button" id="prev-btn">← Назад</button>
+        <button class="nav-button" id="next-btn">Вперед →</button>
+    </div>
+    
+    <script>
+        // Простая навигация между слайдами
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'flex' : 'none';
+            });
+        }
+        
+        document.getElementById('next-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+        
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+        
+        // Инициализация первого слайда
+        showSlide(0);
+    </script>
+</body>
+</html>
